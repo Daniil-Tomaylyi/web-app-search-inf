@@ -142,9 +142,9 @@ border-color:var(--cols-num);
     
   }
   
-  @media (min-width: 250px) and (max-width: 576px) {
+  @media (min-width: 250px) and (max-width: 400px) {
     html {
-      width: 400px;
+      width: 370px;
     }
     .collapse.navbar-collapse{
      display:contents;
@@ -160,10 +160,10 @@ border-color:var(--cols-num);
       font-weight: 600;
       font-size: 20px;
       width: 340px;
-      padding-top: 130px;
+      padding-top: 70px;
     }
     .page.main-page{
-      height: 57vh;
+      height: 53vh;
     }
 
     .page-content p.autor_promo{
@@ -173,14 +173,36 @@ border-color:var(--cols-num);
     padding-right: 15px;
     }
    .nav-item{
-    margin-right: 55px;
+    margin-right: 45px;
    }
-   .navbar-brand{
-    margin-right: 50px;
+ 
+}
+@media (min-width: 400px)and (max-width: 575px){
+  .collapse.navbar-collapse{
+    display:contents;
    }
-   .container{
-    margin-top: 40px;
+   .navbar-nav{
+     display: contents;
    }
+   .nav-item{
+    margin-right: 32px;
+   }
+  .page-content h1{
+    font-weight: 600;
+    font-size: 20px;
+    width: auto;
+    padding-top: 70px;
+  }
+  .page-content p.text_promo{
+   text-align: left;
+  font-size: 15px;
+  font-weight: normal;
+  padding-right: 15px;
+  width:auto;
+  }
+ .nav-item{
+  margin-right: 45px;
+ }
 }
   @media (min-width: 576px)and (max-width: 900px){
     html {
@@ -204,6 +226,18 @@ border-color:var(--cols-num);
     }
     .page.main-page{
       height: 68vh;
+    }
+    .page-content h1{
+      font-weight: 600;
+      font-size: 20px;
+      width: 500px;
+      padding-top: 130px;
+    }
+    .page-content p.autor_promo{
+      text-align: right;
+    font-size: 15px;
+    font-weight: normal;
+    padding-right: 15px;
     }
   }
   @media (min-width: 900px )and (max-width: 1300px){
