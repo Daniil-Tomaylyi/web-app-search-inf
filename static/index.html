@@ -1,0 +1,45 @@
+{{ define "index" }}
+
+{{ template "promo" }}
+
+<section class = "page promo">
+  <h1>Каталог мероприятий</h1>
+    <form action="/search" class="input-group" method="POST">     
+          <select name="select_box"  class="form-select" id="select_box" aria-label="Default select example">
+      <option selected value="0">Тип научного мероприятия</option>
+      <option value="1">Конференция</option>
+      <option value="2">Хакатон</option>
+      <option value="3">Олимпиада</option>
+      <option value="4">Форум</option>
+    </select>
+      <input type="text" name="search" class="form-control" placeholder="Search for...">
+      <div>
+        <button type="submit" class="btn btn-search"  >Найти</button>
+      </div>
+    </form>
+
+
+  {{ range .}}
+  <p></p>
+  <div class="card w-100 p-3 text-center bg-light">
+      <h2>{{ .Name }}</h2>
+      <p>{{ .Date_event }}</h2>
+          <p>{{ .Organizers }}</h2>
+            <p><button type="button" onclick="window.location.href = '{{ .Link }}';" class="btn btn-info">Узнать подробнее</button>
+
+      </div>
+    </div>
+  {{ else }}
+  <p>Мероприятия не найдены!</p>
+  {{ end }}
+
+</section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/static/js/script.js"></script>
+
+</body>
+</html>
+
+{{ end }} 
