@@ -29,7 +29,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 	}
 	defer db.Close()
 
-	t, err := template.ParseFiles("static/search_form.html", "static/index.html", "static/promo.html")
+	t, err := template.ParseFiles("static/index.html", "static/promo.html")
 
 	if err != nil {
 		panic(err.Error())
@@ -62,7 +62,7 @@ func search(w http.ResponseWriter, r *http.Request) {
 	}
 	defer db.Close()
 
-	t, err := template.ParseFiles("static/search_form.html", "static/search.html","static/promo.html")
+	t, err := template.ParseFiles("static/search.html","static/promo.html")
 
 	if err != nil {
 		panic(err.Error())

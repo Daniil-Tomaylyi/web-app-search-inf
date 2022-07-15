@@ -242,7 +242,7 @@ border-color:var(--cols-num);
   }
   @media (min-width: 900px )and (max-width: 1300px){
     html {
-      width: 910px;
+      width: 1300px;
     }
     .collapse.navbar-collapse{
       margin-left: 100px;
